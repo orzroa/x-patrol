@@ -195,8 +195,8 @@ func CancelReportById(id int64) (err error) {
 	if err == nil && has {
 		report.Status = 2
 		_, err = Engine.Id(id).Cols("status").Update(report)
-		repoName := report.RepoName
-		CancelReportByRepo(repoName)
+		//repoName := report.RepoName
+		//CancelReportByRepo(repoName)
 	}
 	return err
 }
